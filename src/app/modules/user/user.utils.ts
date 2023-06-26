@@ -9,3 +9,9 @@ export const findLastUserId = async (): Promise<string | undefined> => {
   
     return lastUser?.id;
   };
+
+  export const generateUserId = async (): Promise<string> => {
+    const currentId = (await findLastUserId()) || (0).toString().padStart(5, '0');
+    const incrementedId = (parseInt(currentId) + 1).toString().padStart(5, '0');
+    return incrementedId;
+  };
