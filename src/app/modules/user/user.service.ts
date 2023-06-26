@@ -1,4 +1,3 @@
-import { httpStatus } from 'http-status';
 import config from "../../../config";
 import { IUser } from "./user.interface"
 import { User } from "./user.model"
