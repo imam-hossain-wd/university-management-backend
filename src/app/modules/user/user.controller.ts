@@ -6,7 +6,7 @@ import { IUser } from "./user.interface";
 import httpStatus from "http-status";
 
 
-const createStudent: RequestHandler = catchAsync(
+const createUser: RequestHandler = catchAsync(
     async (req: Request, res: Response) => {
       const {...userData } = req.body;
       const result = await userService.createUser(userData);
@@ -19,3 +19,7 @@ const createStudent: RequestHandler = catchAsync(
       });
     }
   );
+
+  export const userController ={
+    createUser
+  }
