@@ -4,8 +4,6 @@ import config from './config';
 
 const {port, database_url} = config
 
-
-
 const run = async ()=>{
     try{
         mongoose.connect(database_url as string)
